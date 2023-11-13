@@ -13,6 +13,7 @@ func main() {
 
 	router := gin.Default()
 	router.GET("/albums", f.GetAlbums)
+	router.POST("/albums", f.AddAlbum)
 
 	router.Run("localhost:8080")
 }

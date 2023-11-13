@@ -11,5 +11,9 @@ import (
 func GetAlbums(c *gin.Context) {
 	var albums = s.Albums
 
-	c.IndentedJSON(http.StatusOK, albums)
+	c.JSON(http.StatusOK, gin.H{
+		"message":    "success",
+		"statusCode": http.StatusOK,
+		"data":       albums,
+	})
 }
