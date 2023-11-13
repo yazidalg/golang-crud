@@ -12,8 +12,10 @@ func main() {
 	fmt.Println("CRUD With Golang")
 
 	router := gin.Default()
+
 	router.GET("/albums", f.GetAlbums)
 	router.POST("/albums", f.AddAlbum)
+	router.GET("/albums/:id", f.GetAlbumById)
 
 	router.Run("localhost:8080")
 }
